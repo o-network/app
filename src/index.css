@@ -1,0 +1,31 @@
+html, body, #app {
+  height: 100%;
+  background: rgb(240, 240, 240);
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+details summary::-webkit-details-marker { display:none; }
+
+/* to change the pointer on hover */
+details summary { cursor: pointer; }
+
+/* to style the arrow widget on opening and closing */
+details[open] summary::-webkit-details-marker {
+  color: #00F;
+  background: #0FF;
+}
+
+/* using content this time for a unicode character */
+summary::-webkit-details-marker {display: none; }
+details summary::before { content:"►"; }
+details[open] summary::before { content:"▼ " }
+
+/* Opt in */
+.no-focus-outline a:focus,
+.no-focus-outline button:focus {
+  outline: none;
+}
