@@ -4,7 +4,7 @@
   "description": "Describe app here",
   "private": true,
   "scripts": {
-    "build": "nwb build-react-app",
+    "build": "nwb build-react-app && cp ./netlify.redirects.txt ./dist/_redirects",
     "clean": "nwb clean-app",
     "start": "nwb serve-react-app",
     "test": "nwb test-react",
